@@ -1,0 +1,35 @@
+function AlanAnnoyingKid(input){
+	//Even Alan's kid hates hardcoders.
+  var negation, verb, object, conjVerb, output;
+  if( input[12] === "'" ){
+    negation = true;
+    var i = 15;
+    while( input[i] !== " " ){
+      verb += input[i];
+      i++;
+    }
+    i += 1;
+    while( input[i] !== " " ){
+      object += input[i];
+      i++;
+    }
+  } else {
+    negation = false;
+    var i = 8;
+    while( input[i] !== " " ){
+      verb += input[i];
+      i++;
+    }
+    i += 1;
+    while( input[i] !== " " ){
+      object += input[i];
+      i++;
+    }
+  }
+  if (negation === true) {
+    output = "I don't think you didn't " + verb + " " + object + " today, I think you " + "did " + verb + " it!"
+  } else {
+    conjVerb = verb + "ed";
+    output = "I don't think you " + conjVerb + " " + object + " today, I think you " + "didn't " + verb + " at all!"
+  }
+}
